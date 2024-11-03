@@ -11,46 +11,46 @@
     </string-array>
 
     <string-array name="milk">
-        <item>Молоко|milk.jpg</item>
-        <item>Кефир|milk1.jpeg</item>
-        <item>Сыворотка|milk2.jpeg</item>
+        <item>Молоко|milk.jpg|moloko.html</item>
+        <item>Кефир|milk1.jpeg|kefir.html</item>
+        <item>Сыворотка|milk2.jpeg|sivorotka.html</item>
     </string-array>
 
     <string-array name="meat">
-        <item>Мясо|meat.jpeg</item>
-        <item>Вырезка|meat1.jpg</item>
-        <item>Бекон|meat2.jpg</item>
+        <item>Мясо|meat.jpeg|miaso.html</item>
+        <item>Вырезка|meat1.jpg|virezka.html</item>
+        <item>Бекон|meat2.jpg|bekon.html</item>
     </string-array>
 
     <string-array name="green_grace">
-        <item>Петрушка|green_grace.jpg</item>
-        <item>Укроп|green_grace1.jpg</item>
-        <item>Кариандр|green_grace2.jpeg</item>
+        <item>Петрушка|green_grace.jpg|petrushka.html</item>
+        <item>Укроп|green_grace1.jpg|ukrop.html</item>
+        <item>Кариандр|green_grace2.jpeg|koriandr.html</item>
     </string-array>
 
     <string-array name="bread">
-        <item>Хлеб|bread.jpg</item>
-        <item>Батон|bread1.jpg</item>
-        <item>Пирог|bread2.jpg</item>
-        <item>Багет|bread3.jpg</item>
+        <item>Хлеб|bread.jpg|hleb.html</item>
+        <item>Батон|bread1.jpg|baton.html</item>
+        <item>Пирог|bread2.jpg|pirog.html</item>
+        <item>Багет|bread3.jpg|baget.html</item>
     </string-array>
 
     <string-array name="fruits">
-        <item>Яблоко|fruits.jpg</item>
-        <item>Апельсин|fruits1.jpeg</item>
-        <item>Банан|fruits2.jpeg</item>
+        <item>Яблоко|fruits.jpg|yabloko.html</item>
+        <item>Апельсин|fruits1.jpeg|apilsin.html</item>
+        <item>Банан|fruits2.jpeg|banan.html</item>
     </string-array>
 
     <string-array name="vegetables">
-        <item>Капуста|vegetables.jpg</item>
-        <item>Помидор|vegetables1.jpg</item>
-        <item>Огурец|vegetables2.jpg</item>
+        <item>Капуста|vegetables.jpg|kapusta.html</item>
+        <item>Помидор|vegetables1.jpg|pomidor.html</item>
+        <item>Огурец|vegetables2.jpg|ogurec.html</item>
     </string-array>
 
     <string-array name="dessert">
-        <item>Шоколад|dessert.jpg</item>
-        <item>Мармелад|dessert1.jpg</item>
-        <item>Торт|dessert2.jpg</item>
+        <item>Шоколад|dessert.jpg|shocolad.html</item>
+        <item>Мармелад|dessert1.jpg|marmelad.html</item>
+        <item>Торт|dessert2.jpg|tort.html</item>
     </string-array>
 
 </resources>
