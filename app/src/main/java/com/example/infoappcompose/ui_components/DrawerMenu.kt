@@ -29,9 +29,16 @@ import androidx.compose.ui.unit.dp
 import com.example.infoappcompose.R
 import com.example.infoappcompose.ui.theme.BgTransparent
 import com.example.infoappcompose.ui.theme.MainBlue
+import com.example.infoappcompose.utils.DrawerEvents
 
+/**
+ * Последовательность события при нажатии:
+ * 1. Жму на кнопку, создаётся onEvent с Индексом и Заголовком
+ * 2. Событие отправляется в Body
+ * 3. Далее событие отправляем, через ф-ю onEvent на MainActivity
+ */
 @Composable
-fun DriverMenu() {
+fun DrawerMenu(onEvent: (DrawerEvents) -> Unit) {
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(
@@ -43,7 +50,9 @@ fun DriverMenu() {
         )
         Column(modifier = Modifier.fillMaxSize()) {
             Header()
-            Body()
+            Body() { drawerEvents ->
+                onEvent(drawerEvents)
+            }
         }
     }
 
@@ -86,7 +95,7 @@ fun Header() {
 }
 
 @Composable
-fun Body() {
+fun Body(onEvent: (DrawerEvents) -> Unit) {
     val list = stringArrayResource(id = R.array.drawer_list)
     LazyColumn(modifier = Modifier.fillMaxSize()) {
         itemsIndexed(list) { index, title ->
@@ -101,7 +110,7 @@ fun Body() {
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
-
+                            onEvent(DrawerEvents.OnItemClick(title, index))
                         }
                         .padding(10.dp)
                         .wrapContentWidth(),

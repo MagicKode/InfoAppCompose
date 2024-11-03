@@ -9,4 +9,47 @@
         <item>Овощи</item>
         <item>Сладкое</item>
     </string-array>
+
+    <string-array name="milk">
+        <item>Молоко|milk.jpg</item>
+        <item>Кефир|milk1.jpeg</item>
+        <item>Сыворотка|milk2.jpeg</item>
+    </string-array>
+
+    <string-array name="meat">
+        <item>Мясо|meat.jpeg</item>
+        <item>Вырезка|meat1.jpg</item>
+        <item>Бекон|meat2.jpg</item>
+    </string-array>
+
+    <string-array name="green_grace">
+        <item>Петрушка|green_grace.jpg</item>
+        <item>Укроп|green_grace1.jpg</item>
+        <item>Кариандр|green_grace2.jpeg</item>
+    </string-array>
+
+    <string-array name="bread">
+        <item>Хлеб|bread.jpg</item>
+        <item>Батон|bread1.jpg</item>
+        <item>Пирог|bread2.jpg</item>
+    </string-array>
+
+    <string-array name="fruits">
+        <item>Яблоко|fruits.jpg</item>
+        <item>Апельсин|fruits1.jpeg</item>
+        <item>Банан|fruits2.jpeg</item>
+    </string-array>
+
+    <string-array name="vegetables">
+        <item>Капуста|vegetables.jpg</item>
+        <item>Помидор|vegetables1.jpg</item>
+        <item>Огурец|vegetables2.jpg</item>
+    </string-array>
+
+    <string-array name="dessert">
+        <item>Шоколад|dessert.jpg</item>
+        <item>Мармелад|dessert1.jpg</item>
+        <item>Торт|dessert2.jpg</item>
+    </string-array>
+
 </resources>
