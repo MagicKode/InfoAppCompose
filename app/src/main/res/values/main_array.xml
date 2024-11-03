@@ -32,6 +32,7 @@
         <item>Хлеб|bread.jpg</item>
         <item>Батон|bread1.jpg</item>
         <item>Пирог|bread2.jpg</item>
+        <item>Багет|bread3.jpg</item>
     </string-array>
 
     <string-array name="fruits">
