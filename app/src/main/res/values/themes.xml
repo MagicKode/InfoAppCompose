@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Theme.InfoAppCompose" parent="android:Theme.Material.Light.NoActionBar" >
         <item name="android:statusBarColor">@color/gray</item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="s">#E6038ECD</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@drawable/ic_logo</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
     </style>
 </resources>
