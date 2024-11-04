@@ -12,6 +12,9 @@ import com.example.infoappcompose.ui_components.InfoScreen
 import com.example.infoappcompose.ui_components.MainScreen
 import com.example.infoappcompose.utils.Routes
 import com.example.infoappcompose.utils.ListItem
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +28,7 @@ class MainActivity : ComponentActivity() {
                     startDestination = Routes.MAIN_SCREEN
                 ) {
                     composable(Routes.MAIN_SCREEN) {
-                        MainScreen(context = this@MainActivity) { listItem ->
+                        MainScreen { listItem ->
                             item = listItem
                             navController.navigate(Routes.INFO_SCREEN)
                         }
