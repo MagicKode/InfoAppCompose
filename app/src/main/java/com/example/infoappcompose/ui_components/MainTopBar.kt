@@ -11,6 +11,8 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.graphics.Color
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.infoappcompose.MainViewModel
 import kotlinx.coroutines.launch
 
 
@@ -18,7 +20,11 @@ import kotlinx.coroutines.launch
  * Создаём шапку с кнопками меню и остальными
  */
 @Composable
-fun MainTopBar(title: String, scaffoldState: ScaffoldState) {
+fun MainTopBar(
+    title: String,
+    scaffoldState: ScaffoldState,
+    onFavClick: () -> Unit    //для изменения заголовка при просмотре списка Избранные продукты
+) {
     val coroutine = rememberCoroutineScope()
     TopAppBar(
         title = {
@@ -42,7 +48,7 @@ fun MainTopBar(title: String, scaffoldState: ScaffoldState) {
         actions = {
             IconButton(
                 onClick = {
-
+                    onFavClick()
                 }
             ) {
                 Icon(

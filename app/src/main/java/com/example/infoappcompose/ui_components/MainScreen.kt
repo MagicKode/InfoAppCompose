@@ -7,6 +7,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Scaffold
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -35,7 +36,9 @@ fun MainScreen(
     val topBarTitle = remember {
         mutableStateOf("Молоко")  //пока хардкодим наименование загаловка шапки
     }
-    mainViewModel.getAllItemsByCategory(topBarTitle.value)
+    LaunchedEffect(Unit) {      //чтобы список избранных СРАЗУ появлялся, а не при повторном нажатии на иконку избранные.
+        mainViewModel.getAllItemsByCategory(topBarTitle.value)
+    }
 
     Scaffold(      //создаём контейнер для создания шапки и кнопок приложения
         scaffoldState = scaffoldState,
@@ -43,7 +46,10 @@ fun MainScreen(
             MainTopBar(
                 title = topBarTitle.value,
                 scaffoldState
-            )
+            ) {
+                topBarTitle.value = "Избранные"
+                mainViewModel.getFavorites()
+            }
         },
         drawerContent = {
             DrawerMenu() { event ->
@@ -61,7 +67,10 @@ fun MainScreen(
     ) {
         LazyColumn(modifier = Modifier.fillMaxSize()) {
             items(mainList.value) { item ->
-                MainListItem(item = item) { listItem ->
+                MainListItem(
+                    mainViewModel = mainViewModel,
+                    item = item
+                ) { listItem ->
                     onClick(listItem)
                 }
             }

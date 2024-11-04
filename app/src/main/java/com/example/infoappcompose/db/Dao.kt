@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.infoappcompose.utils.ListItem
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface Dao {
@@ -15,6 +16,12 @@ interface Dao {
     @Delete
     suspend fun deleteItem(item: ListItem)
 
+    /**
+     * используем Flow, чтобы при изменениях, данные обновлялись
+     */
     @Query("SELECT * FROM main WHERE category LIKE :cat")
-    suspend fun getAllItemsByCategory(cat: String): List<ListItem>
+    fun getAllItemsByCategory(cat: String): Flow<List<ListItem>>
+
+    @Query("SELECT * FROM main WHERE favorites = 1")
+    fun getFavorites(): Flow<List<ListItem>>
 }
